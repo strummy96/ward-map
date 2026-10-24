@@ -14,7 +14,7 @@ async function init_map() {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    wards_geojson = await get_geojson("/data/wards.geojson");
+    wards_geojson = await get_geojson("data/wards.geojson");
     console.log(wards_geojson)
     let wards_layer = L.geoJSON(wards_geojson, {
         weight: 2,
